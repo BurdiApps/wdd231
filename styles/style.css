@@ -6,8 +6,8 @@
 }
 
 :root {
-    --primary-color: #9BD1E5;
-    --secondary-color: #6A8EAE;
+    --primary-color: #2C5AA0;
+    --secondary-color: #1a3a6e;
     --accent-color: #05335D;
     --text-dark: #333;
     --text-light: #666;
@@ -331,92 +331,4 @@ footer {
 footer p {
     margin: 0.5rem 0;
     font-size: 0.9rem;
-}
-
-/* Large Screen Styles */
-@media screen and (min-width: 768px) {
-
-    /* Hide hamburger button on large screens */
-    .hamburger {
-        display: none;
-    }
-
-    /* Adjust header grid for large screens */
-    header {
-        grid-template-columns: 32px auto;
-        padding: 1rem 2rem;
-    }
-
-    /* Make logo larger on large screens */
-    header img {
-        width: 32px;
-        height: 32px;
-    }
-
-    header span {
-        font-size: 1.8rem;
-    }
-
-    /* Always show navigation on large screens */
-    .navigation {
-        display: block;
-    }
-
-    .navigation ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .navigation li {
-        border-bottom: none;
-        border-right: 1px solid var(--border-color);
-    }
-
-    .navigation li:last-child {
-        border-right: none;
-    }
-
-    .navigation a {
-        padding: 1rem 2rem;
-    }
-
-    /* Main content - wider padding */
-    main {
-        padding: 2rem;
-    }
-
-    main h1 {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-    }
-
-    /* Profile section - side by side layout */
-    .profile {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 2rem;
-    }
-
-    .profile div {
-        text-align: left;
-        flex: 1;
-    }
-
-    /* Course cards - 2 column grid */
-    #courses-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card {
-        padding: 2rem;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-
-    /* Course cards - 3 column grid on larger screens */
-    #courses-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
