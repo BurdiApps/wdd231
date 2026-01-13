@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 - Web Frontend Development course home page for James Burdick">
+    <meta name="author" content="James Burdick">
+    <title>James Burdick - WDD 231 - Web Frontend Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="site logo" width="1" height="1">
+        <span>James Burdick</span>
+        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="chamber/">Chamber</a></li>
+            <li><a href="project/">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="profile">
+                <img src="images/burdi-avatar.gif" alt="James Burdick Profile Photo" width="200" height="200">
+                <div>
+                    <p>Hey there! I'm a student in the Web and Computer Programming certificate program, working towards
+                        a
+                        Software Development degree.</p>
+                    <p>I'm passionate about web development and excited to build modern, responsive websites using HTML,
+                        CSS, and JavaScript. I am also trying to get into Game Development with C# and Godot on my free
+                        time.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card certificate">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button id="all" class="active">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+            <div id="courses-container"></div>
+            <p class="credits">Total Credits Required: <span id="total-credits">0</span></p>
+        </section>
+
+        <section class="card">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> aburdick@pathway.edu</p>
+            <p><strong>Location:</strong> Bakersfield, California, United States</p>
+            <p>Feel free to connect with me on social media using the links in the footer below!</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/BurdiApps" target="_blank" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub" width="32" height="32">
+            </a>
+            <a href="https://linkedin.com/in/" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+            </a>
+            <a href="https://discord.com/users/" target="_blank" aria-label="Discord">
+                <img src="images/discord.svg" alt="Discord" width="32" height="32">
+            </a>
+            <a href="https://teams.microsoft.com" target="_blank" aria-label="Microsoft Teams">
+                <img src="images/microsoft-teams.svg" alt="Microsoft Teams" width="32" height="32">
+            </a>
+        </div>
+        <p>&copy; <span id="currentYear"></span> | BurdiApps | Bakersfield, California, United States</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,422 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #9BD1E5;
+    --secondary-color: #6A8EAE;
+    --accent-color: #05335D;
+    --text-dark: #333;
+    --text-light: #666;
+    --bg-light: #f4f4f4;
+    --bg-white: #fff;
+    --border-color: #ddd;
+    --completed-bg: #d4edda;
+    --completed-border: #28a745;
+}
+
+body {
+    font-family: 'Nunito Sans', 'Nunito', 'Press Start 2P', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+/* Header Styles with CSS Grid */
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styles */
+header img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* Site Name Styles */
+header span {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* Hamburger Button Styles */
+.hamburger {
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Hamburger Icon Entity */
+.hamburger::before {
+    content: "\2630";
+}
+
+/* Close Icon Entity when 'show' class is applied */
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/* Navigation Styles */
+.navigation {
+    display: none;
+    background-color: var(--bg-white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navigation a {
+    display: block;
+    padding: 1rem;
+    min-height: 44px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Wayfinding: Current page styling */
+.navigation li.current a {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Main Content Styles */
+main {
+    padding: 1.5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h1 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+}
+
+.profile div {
+    text-align: center;
+}
+
+.profile p {
+    margin-bottom: 0.8rem;
+    color: var(--text-light);
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-buttons button {
+    padding: 0.6rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    background-color: var(--bg-white);
+    color: var(--primary-color);
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 44px;
+}
+
+.filter-buttons button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filter-buttons button.active {
+    background-color: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+/* Course Cards Container */
+#courses-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Course Card Styles */
+.course-card {
+    background-color: var(--bg-light);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.course-card h3 {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.course-title {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.course-credits {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Completed Course Styling */
+.course-card.completed {
+    background-color: var(--completed-bg);
+    border-color: var(--completed-border);
+}
+
+.course-card.completed h3 {
+    color: var(--completed-border);
+}
+
+.course-card.completed::after {
+    content: " ✓";
+    color: var(--completed-border);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* Credits Display */
+.credits {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    padding: 1rem;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+}
+
+#total-credits {
+    color: var(--accent-color);
+}
+
+/* Contact Section */
+.card p {
+    margin-bottom: 0.8rem;
+    color: var(--text-light);
+}
+
+.card p strong {
+    color: var(--text-dark);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+/* Social Media Icons Layout */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.social-icons img {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* Large Screen Styles */
+@media screen and (min-width: 768px) {
+
+    /* Hide hamburger button on large screens */
+    .hamburger {
+        display: none;
+    }
+
+    /* Adjust header grid for large screens */
+    header {
+        grid-template-columns: 32px auto;
+        padding: 1rem 2rem;
+    }
+
+    /* Make logo larger on large screens */
+    header img {
+        width: 32px;
+        height: 32px;
+    }
+
+    header span {
+        font-size: 1.8rem;
+    }
+
+    /* Always show navigation on large screens */
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navigation li {
+        border-bottom: none;
+        border-right: 1px solid var(--border-color);
+    }
+
+    .navigation li:last-child {
+        border-right: none;
+    }
+
+    .navigation a {
+        padding: 1rem 2rem;
+    }
+
+    /* Main content - wider padding */
+    main {
+        padding: 2rem;
+    }
+
+    main h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Profile section - side by side layout */
+    .profile {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .profile div {
+        text-align: left;
+        flex: 1;
+    }
+
+    /* Course cards - 2 column grid */
+    #courses-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* Course cards - 3 column grid on larger screens */
+    #courses-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
