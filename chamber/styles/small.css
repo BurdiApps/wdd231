@@ -1,0 +1,414 @@
+/* ===================================
+   MOBILE FIRST (Small Screen Styles)
+   =================================== */
+
+/* Root Variables - Minimalist Bakersfield-inspired color scheme with pixel art*/
+:root {
+    --primary-blue: #0066b2;
+    --dark-blue: #003d6b;
+    --light-gray: #f5f5f5;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #333333;
+    --text-color: #2c2c2c;
+    --white: #ffffff;
+    --gold: #d4a574;
+    --silver: #c0c0c0;
+    --member: #cd7f32;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+
+    /* Pixel art accent colors */
+    --pixel-accent: #ff6b35;
+    --pixel-highlight: #f7931e;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    font-family: 'Press Start 2P', monospace;
+}
+
+h3,
+.membership-badge,
+nav a,
+button {
+    font-family: 'Press Start 2P', monospace;
+}
+
+body {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text-color);
+    background-color: var(--white);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--medium-gray);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+
+    /* Crisp rendering for pixel art logo */
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.logo-text h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    line-height: 1.2;
+}
+
+.logo-text p {
+    font-size: 0.75rem;
+    color: var(--dark-gray);
+    font-weight: 400;
+}
+
+/* Hamburger Menu */
+#menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 1001;
+}
+
+#menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-blue);
+    transition: var(--transition);
+}
+
+#menu-toggle:hover span {
+    background-color: var(--dark-blue);
+}
+
+/* Navigation */
+nav {
+    background-color: var(--pixel-accent);
+    display: none;
+}
+
+nav.active {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 400;
+    transition: var(--transition);
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #228b22;
+    padding-left: 2rem;
+}
+
+/* Main Content */
+main {
+    min-height: 60vh;
+}
+
+.directory-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1rem;
+    color: var(--dark-gray);
+    font-weight: 300;
+}
+
+/* View Controls */
+.view-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.view-btn {
+    background-color: var(--light-gray);
+    border: 2px solid var(--medium-gray);
+    padding: 0.75rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-btn:hover {
+    background-color: var(--medium-gray);
+}
+
+.view-btn.active {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.view-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Members Grid View */
+.members-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.member-card {
+    background-color: var(--white);
+    border: 1px solid var(--medium-gray);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.member-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.member-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+
+    /* Crisp pixel art rendering - prevents blurry scaling */
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.member-info {
+    padding: 1.5rem;
+}
+
+.member-info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.membership-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.gold {
+    background-color: var(--gold);
+    color: var(--dark-blue);
+}
+
+.silver {
+    background-color: var(--silver);
+    color: var(--dark-blue);
+}
+
+.member {
+    background-color: var(--member);
+    color: var(--white);
+}
+
+.member-info p {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.member-info .description {
+    font-style: italic;
+    color: var(--text-color);
+    margin-top: 0.75rem;
+}
+
+.member-info a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.member-info a:hover {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+
+/* Members List View */
+.members-list .member-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 8px;
+}
+
+.members-list .member-card img {
+    display: none;
+}
+
+.members-list .member-info {
+    padding: 1rem;
+}
+
+.members-list .member-info h3 {
+    font-size: 1.1rem;
+}
+
+.members-list .member-info p {
+    font-size: 0.85rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 2rem 1rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.footer-section address {
+    font-style: normal;
+    line-height: 1.8;
+}
+
+.footer-section a {
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-section a:hover {
+    color: var(--gold);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 0.5rem;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.footer-bottom p {
+    margin-bottom: 0.25rem;
+}

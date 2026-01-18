@@ -1,0 +1,85 @@
+{
+    "members": [
+        {
+            "name": "Valley Strong Credit Union",
+            "address": "7900 Stockdale Hwy, Bakersfield, CA 93311",
+            "phone": "(661) 327-9461",
+            "website": "https://www.valleystrong.com",
+            "image": "valley-strong.jpeg",
+            "membershipLevel": 3,
+            "description": "Community-focused credit union serving Kern County"
+        },
+        {
+            "name": "Dignity Health Memorial Hospital",
+            "address": "420 34th St, Bakersfield, CA 93301",
+            "phone": "(661) 327-1792",
+            "website": "https://www.dignityhealth.org",
+            "image": "dignity-health.jpeg",
+            "membershipLevel": 3,
+            "description": "Leading healthcare provider in Kern County"
+        },
+        {
+            "name": "Kern Energy",
+            "address": "3200 N Highway 99, Bakersfield, CA 93308",
+            "phone": "(661) 392-5000",
+            "website": "https://www.kernenergy.com",
+            "image": "kern-energy.jpeg",
+            "membershipLevel": 3,
+            "description": "Independent oil refinery and fuel distributor"
+        },
+        {
+            "name": "Rabobank",
+            "address": "4550 California Ave, Bakersfield, CA 93309",
+            "phone": "(661) 861-7100",
+            "website": "https://www.rabobank.com",
+            "image": "rabobank.jpeg",
+            "membershipLevel": 2,
+            "description": "Agricultural and commercial banking services"
+        },
+        {
+            "name": "The Padre Hotel",
+            "address": "1702 18th St, Bakersfield, CA 93301",
+            "phone": "(661) 427-4900",
+            "website": "https://www.thepadrehotel.com",
+            "image": "padre-hotel.jpeg",
+            "membershipLevel": 2,
+            "description": "Historic boutique hotel in downtown Bakersfield"
+        },
+        {
+            "name": "Bolthouse Farms",
+            "address": "8500 Bolthouse Dr, Bakersfield, CA 93312",
+            "phone": "(661) 366-7220",
+            "website": "https://www.bolthouse.com",
+            "image": "bolthouse.jpeg",
+            "membershipLevel": 2,
+            "description": "Premium carrot and beverage producer"
+        },
+        {
+            "name": "Bakersfield Sound",
+            "address": "1400 Easton Dr #112, Bakersfield, CA 93309",
+            "phone": "(661) 324-9773",
+            "website": "https://www.bakersfieldcountry.com",
+            "image": "bakersfield-sound.jpeg",
+            "membershipLevel": 1,
+            "description": "Music venue celebrating Bakersfield's country music heritage"
+        },
+        {
+            "name": "Grimmway Farms",
+            "address": "1 Grimmway Dr, Arvin, CA 93203",
+            "phone": "(661) 845-9435",
+            "website": "https://www.grimmway.com",
+            "image": "grimmway.jpeg",
+            "membershipLevel": 3,
+            "description": "World's largest carrot producer and organic vegetable grower"
+        },
+        {
+            "name": "McCarthy Building Companies",
+            "address": "1801 Westwind Dr #203, Bakersfield, CA 93301",
+            "phone": "(661) 322-3444",
+            "website": "https://www.mccarthy.com",
+            "image": "mccarthy.jpeg",
+            "membershipLevel": 2,
+            "description": "General contractor and construction management firm"
+        }
+    ]
+}

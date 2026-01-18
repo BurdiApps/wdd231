@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Reference - Bakersfield Chamber</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            color: #0066b2;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .example {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .example h3 {
+            color: #003d6b;
+            margin-top: 0;
+        }
+
+        .pixel-canvas {
+            width: 100%;
+            height: 150px;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+            border: 2px solid #e0e0e0;
+        }
+
+        .colors {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .color {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        code {
+            background: #f5f5f5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-size: 0.85rem;
+        }
+
+        .tip {
+            background: #fff8e1;
+            padding: 1rem;
+            border-left: 4px solid #f7931e;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🎨 Bakersfield Chamber Pixel Art Reference</h1>
+
+    <div class="tip">
+        <strong>Quick Start:</strong> Use the color palettes below when creating your pixel art.
+        Aim for 8-16 colors per image. Simple shapes work best! 400x300px canvas recommended.
+    </div>
+
+    <div class="grid">
+        <div class="example">
+            <h3>1. Valley Strong (Bank)</h3>
+            <p><strong>Theme:</strong> Bank Building</p>
+            <p><strong>Elements:</strong> Building facade, windows, $ sign</p>
+            <div class="colors">
+                <div class="color" style="background: #0066b2;" title="#0066b2"></div>
+                <div class="color" style="background: #003d6b;" title="#003d6b"></div>
+                <div class="color" style="background: #d4a574;" title="#d4a574"></div>
+                <div class="color" style="background: #ffffff;" title="#ffffff"></div>
+                <div class="color" style="background: #2c2c2c;" title="#2c2c2c"></div>
+            </div>
+            <p><small>Colors: Blue, Dark Blue, Gold, White, Dark Gray</small></p>
+        </div>
+
+        <div class="example">
+            <h3>2. Dignity Health (Hospital)</h3>
+            <p><strong>Theme:</strong> Medical Facility</p>
+            <p><strong>Elements:</strong> Building, red cross, ambulance</p>
+            <div class="colors">
+                <div class="color" style="background: #ffffff;" title="#ffffff"></div>
+                <div class="color" style="background: #dc143c;" title="#dc143c"></div>
+                <div class="color" style="background: #87ceeb;" title="#87ceeb"></div>
+                <div class="color" style="background: #2c2c2c;" title="#2c2c2c"></div>
+            </div>
+            <p><small>Colors: White, Red, Sky Blue, Dark Gray</small></p>
+        </div>
+
+        <div class="example">
+            <h3>3. Kern Oil (Oil Derrick)</h3>
+            <p><strong>Theme:</strong> Oil Industry</p>
+            <p><strong>Elements:</strong> Oil derrick, barrel, industrial</p>
+            <div class="colors">
+                <div class="color" style="background: #1a472a;" title="#1a472a"></div>
+                <div class="color" style="background: #8b4513;" title="#8b4513"></div>
+                <div class="color" style="background: #2c2c2c;" title="#2c2c2c"></div>
+                <div class="color" style="background: #f7931e;" title="#f7931e"></div>
+            </div>
+            <p><small>Colors: Dark Green, Brown, Gray, Orange</small></p>
+        </div>
+
+        <div class="example">
+            <h3>4. Rabobank</h3>
+            <p><strong>Theme:</strong> Agricultural Bank</p>
+            <p><strong>Elements:</strong> Bank + wheat/farm elements</p>
+            <div class="colors">
+                <div class="color" style="background: #ed6c00;" title="#ed6c00"></div>
+                <div class="color" style="background: #ffffff;" title="#ffffff"></div>
+                <div class="color" style="background: #d4a574;" title="#d4a574"></div>
+                <div class="color" style="background: #228b22;" title="#228b22"></div>
+            </div>
+            <p><small>Colors: Orange, White, Gold, Green</small></p>
+        </div>
+
+        <div class="example">
+            <h3>5. The Padre Hotel</h3>
+            <p><strong>Theme:</strong> Historic Hotel</p>
+            <p><strong>Elements:</strong> Art deco building, palm trees</p>
+            <div class="colors">
+                <div class="color" style="background: #8b4513;" title="#8b4513"></div>
+                <div class="color" style="background: #d4a574;" title="#d4a574"></div>
+                <div class="color" style="background: #f7931e;" title="#f7931e"></div>
+                <div class="color" style="background: #2c2c2c;" title="#2c2c2c"></div>
+            </div>
+            <p><small>Colors: Brown, Gold, Orange, Dark Gray</small></p>
+        </div>
+
+        <div class="example">
+            <h3>6. Bolthouse Farms</h3>
+            <p><strong>Theme:</strong> Carrot Producer</p>
+            <p><strong>Elements:</strong> Giant carrot, farm field</p>
+            <div class="colors">
+                <div class="color" style="background: #ff6b35;" title="#ff6b35"></div>
+                <div class="color" style="background: #228b22;" title="#228b22"></div>
+                <div class="color" style="background: #87ceeb;" title="#87ceeb"></div>
+                <div class="color" style="background: #8b4513;" title="#8b4513"></div>
+            </div>
+            <p><small>Colors: Orange, Green, Sky Blue, Brown</small></p>
+        </div>
+
+        <div class="example">
+            <h3>7. Bakersfield Sound</h3>
+            <p><strong>Theme:</strong> Country Music</p>
+            <p><strong>Elements:</strong> Guitar, musical notes, stage</p>
+            <div class="colors">
+                <div class="color" style="background: #d4a574;" title="#d4a574"></div>
+                <div class="color" style="background: #dc143c;" title="#dc143c"></div>
+                <div class="color" style="background: #2c2c2c;" title="#2c2c2c"></div>
+                <div class="color" style="background: #f7931e;" title="#f7931e"></div>
+            </div>
+            <p><small>Colors: Gold, Red, Dark Gray, Orange</small></p>
+        </div>
+
+        <div class="example">
+            <h3>8. Grimmway Farms</h3>
+            <p><strong>Theme:</strong> Large-Scale Farming</p>
+            <p><strong>Elements:</strong> Carrot fields, tractor</p>
+            <div class="colors">
+                <div class="color" style="background: #228b22;" title="#228b22"></div>
+                <div class="color" style="background: #ff6b35;" title="#ff6b35"></div>
+                <div class="color" style="background: #87ceeb;" title="#87ceeb"></div>
+                <div class="color" style="background: #8b4513;" title="#8b4513"></div>
+            </div>
+            <p><small>Colors: Green, Orange, Sky Blue, Brown</small></p>
+        </div>
+
+        <div class="example">
+            <h3>9. McCarthy Building</h3>
+            <p><strong>Theme:</strong> Construction</p>
+            <p><strong>Elements:</strong> Crane, building, hard hat</p>
+            <div class="colors">
+                <div class="color" style="background: #003d6b;" title="#003d6b"></div>
+                <div class="color" style="background: #ffd700;" title="#ffd700"></div>
+                <div class="color" style="background: #c0c0c0;" title="#c0c0c0"></div>
+                <div class="color" style="background: #2c2c2c;" title="#2c2c2c"></div>
+            </div>
+            <p><small>Colors: Dark Blue, Yellow, Silver, Dark Gray</small></p>
+        </div>
+    </div>
+
+    <div class="tip" style="margin-top: 2rem;">
+        <h3>🎯 Quick Tips:</h3>
+        <ul>
+            <li><strong>Canvas Size:</strong> 400x300 pixels</li>
+            <li><strong>File Format:</strong> PNG (better quality for pixel art)</li>
+            <li><strong>Colors Per Image:</strong> 8-16 colors maximum</li>
+            <li><strong>Keep it Simple:</strong> Recognizable shapes beat complex details</li>
+            <li><strong>Bakersfield Icons:</strong> Oil derricks, agriculture, sunshine!</li>
+            <li><strong>Export Settings:</strong> No anti-aliasing, nearest neighbor scaling</li>
+        </ul>
+    </div>
+
+    <div class="tip" style="background: #e3f2fd; border-left-color: #0066b2;">
+        <h3>🛠️ Recommended Tools:</h3>
+        <ul>
+            <li><strong>Piskel</strong> (piskelapp.com) - Free, browser-based, perfect for beginners</li>
+            <li><strong>Lospec Pixel Editor</strong> (lospec.com/pixel-editor) - Simple online tool</li>
+            <li><strong>Aseprite</strong> ($19.99) - Professional pixel art tool</li>
+        </ul>
+    </div>
+
+    <div class="tip" style="background: #f3e5f5; border-left-color: #9c27b0;">
+        <h3>📐 Ultra-Simple Approach (5 minutes each):</h3>
+        <p>If you're short on time, create simple <strong>icon-style</strong> images (200x200px):</p>
+        <ul>
+            <li><strong>Bank:</strong> Simple building + $ symbol</li>
+            <li><strong>Hospital:</strong> Red cross on white</li>
+            <li><strong>Oil:</strong> Single derrick silhouette</li>
+            <li><strong>Farm:</strong> Carrot or wheat icon</li>
+            <li><strong>Hotel:</strong> Building with "HOTEL" text</li>
+            <li><strong>Music:</strong> Guitar shape</li>
+            <li><strong>Construction:</strong> Crane or hard hat</li>
+        </ul>
+        <p>This still gives a unique pixel art look without spending hours on details!</p>
+    </div>
+
+    <h2 style="margin-top: 3rem; color: #0066b2;">🎨 Workflow Checklist</h2>
+    <div style="background: white; padding: 2rem; border-radius: 8px;">
+        <ol>
+            <li>✅ Open Piskel or your preferred pixel art tool</li>
+            <li>✅ Set canvas to 400x300 pixels</li>
+            <li>✅ Load color palette from above</li>
+            <li>✅ Draw your design (keep it simple!)</li>
+            <li>✅ Export as PNG</li>
+            <li>✅ Save to <code>chamber/images/</code></li>
+            <li>✅ Test in browser with Live Server</li>
+            <li>✅ Adjust and refine as needed</li>
+            <li>✅ Repeat for all 9 businesses</li>
+        </ol>
+    </div>
+
+    <p style="text-align: center; margin-top: 3rem; font-size: 1.2rem;">
+        <strong>Have fun creating! 🎨✨</strong><br>
+        <small>Your pixel art will make this chamber site truly unique!</small>
+    </p>
+</body>
+
+</html>
