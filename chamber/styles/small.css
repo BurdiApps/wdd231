@@ -123,7 +123,7 @@ header {
 
 /* Navigation */
 nav {
-    background-color: var(--pixel-accent);
+    background-color: var(--dark-blue);
     display: none;
 }
 
@@ -152,7 +152,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    background-color: #228b22;
+    background-color: var(--pixel-accent);
     padding-left: 2rem;
 }
 
