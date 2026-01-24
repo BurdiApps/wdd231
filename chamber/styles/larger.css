@@ -72,6 +72,42 @@
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    /* HOME PAGE - Tablet Styles */
+
+    /* Hero */
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .cta-button {
+        font-size: 0.8rem;
+    }
+
+    /* Home Container - 2 column grid */
+    .home-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    /* Events section full width on tablet */
+    .events-section {
+        grid-column: 1 / -1;
+    }
+
+    /* Spotlights - 2 column grid */
+    #spotlights-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .spotlights-section {
+        grid-column: 1 / -1;
+    }
 }
 
 /* ===================================
@@ -137,6 +173,58 @@
     .footer-section h3 {
         font-size: 1.2rem;
     }
+
+    /* HOME PAGE - Desktop Layout */
+
+    /* Hero */
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+
+    .cta-button {
+        font-size: 0.85rem;
+        padding: 1.25rem 2.5rem;
+    }
+
+    /* Home Container - 3 column grid */
+    .home-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2.5rem;
+        padding: 3rem 2rem;
+    }
+
+    /* Weather takes 1 column */
+    .weather-section {
+        grid-column: span 1;
+    }
+
+    /* Events takes 1 column */
+    .events-section {
+        grid-column: span 1;
+    }
+
+    /* Spotlights takes full width */
+    .spotlights-section {
+        grid-column: span 1;
+    }
+
+    /* Spotlight cards horizontal */
+    #spotlights-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .spotlight-card img {
+        height: 120px;
+    }
 }
 
 /* ===================================
@@ -154,6 +242,36 @@
     /* Constrain max width for better readability */
     .page-header h2 {
         font-size: 3.5rem;
+    }
+
+    /* Home page - optimize spotlight layout */
+    .home-container {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .events-section {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .weather-section {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .spotlights-section {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    #spotlights-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .spotlight-card img {
+        height: 150px;
     }
 }
 

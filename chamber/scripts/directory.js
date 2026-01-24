@@ -23,7 +23,9 @@ function setupNavigation() {
     const nav = document.getElementById('main-nav');
 
     menuToggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
+        const isExpanded = nav.classList.toggle('active');
+        // Update ARIA attribute for accessibility
+        menuToggle.setAttribute('aria-expanded', isExpanded);
     });
 }
 
@@ -40,6 +42,9 @@ function setupViewToggle() {
         container.classList.add('members-grid');
         gridBtn.classList.add('active');
         listBtn.classList.remove('active');
+        // Update ARIA states for accessibility
+        gridBtn.setAttribute('aria-pressed', 'true');
+        listBtn.setAttribute('aria-pressed', 'false');
     });
 
     listBtn.addEventListener('click', () => {
@@ -47,6 +52,9 @@ function setupViewToggle() {
         container.classList.add('members-list');
         listBtn.classList.add('active');
         gridBtn.classList.remove('active');
+        // Update ARIA states for accessibility
+        listBtn.setAttribute('aria-pressed', 'true');
+        gridBtn.setAttribute('aria-pressed', 'false');
     });
 }
 
@@ -104,23 +112,26 @@ function displayMembers(members) {
 function createMemberCard(member) {
     const card = document.createElement('div');
     card.className = 'member-card';
+    // Add role for better screen reader support
+    card.setAttribute('role', 'article');
+    card.setAttribute('aria-label', `${member.name} business information`);
 
     // Determine membership level text and class
     const membershipInfo = getMembershipInfo(member.membershipLevel);
 
-    // Build card HTML
+    // Build card HTML with improved alt text
     card.innerHTML = `
         <img src="images/${member.image}" 
-             alt="${member.name}" 
+             alt="${member.name} logo" 
              loading="lazy"
              onerror="this.src='images/placeholder.jpg'">
         <div class="member-info">
             <h3>${member.name}</h3>
-            <span class="membership-badge ${membershipInfo.class}">${membershipInfo.text}</span>
+            <span class="membership-badge ${membershipInfo.class}" role="status" aria-label="${membershipInfo.text} membership level">${membershipInfo.text}</span>
             <p class="description">${member.description}</p>
             <p><strong>Address:</strong> ${member.address}</p>
             <p><strong>Phone:</strong> <a href="tel:${member.phone.replace(/\D/g, '')}">${member.phone}</a></p>
-            <p><strong>Website:</strong> <a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a></p>
+            <p><strong>Website:</strong> <a href="${member.website}" target="_blank" rel="noopener noreferrer" aria-label="Visit ${member.name} website">Visit Website</a></p>
         </div>
     `;
 

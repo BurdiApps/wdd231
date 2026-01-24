@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OpenWeatherMap API Test - Current Weather in Trier, Germany">
+    <meta name="author" content="James Burdick">
+    <title>OpenWeatherMap.org API Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        main {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        #current-temp {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 2rem;
+        }
+
+        figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        #weather-icon {
+            width: 100px;
+            height: 100px;
+        }
+
+        figcaption {
+            font-size: 1.1rem;
+            color: #666;
+            margin-top: 0.5rem;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+    <script src="scripts/weather.js" defer></script>
+</head>
+
+<body>
+    <h1>OpenWeatherMap.org API Test</h1>
+    <main>
+        <p>The current temperature in Trier, Germany is <span id="current-temp"></span></p>
+        <figure>
+            <img id="weather-icon" src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+    </main>
+    <footer>
+        James Burdick | <a href="https://openweathermap.org" target="_blank">OpenWeatherMap.org</a> | CC BY-SA 4.0
+    </footer>
+</body>
+
+</html>

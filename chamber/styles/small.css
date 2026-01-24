@@ -412,3 +412,288 @@ footer {
 .footer-bottom p {
     margin-bottom: 0.25rem;
 }
+
+/* ===================================
+   HOME PAGE STYLES
+   =================================== */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+    background-image: linear-gradient(rgba(0, 102, 178, 0.85), rgba(0, 61, 107, 0.9)),
+        url('../images/bakersfield-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    position: relative;
+}
+
+.hero-content {
+    color: var(--white);
+    max-width: 600px;
+}
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--pixel-accent);
+    color: var(--white);
+    padding: 1rem 2rem;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.75rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+.cta-button:hover {
+    background-color: var(--pixel-highlight);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+}
+
+/* Home Container Grid */
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 2rem;
+}
+
+/* Section Headings */
+.events-section h2,
+.weather-section h2,
+.spotlights-section h2 {
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--pixel-accent);
+}
+
+/* Events Section */
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.event-card {
+    display: flex;
+    gap: 1rem;
+    background: var(--white);
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: var(--transition);
+}
+
+.event-card:hover {
+    transform: translateX(5px);
+    border-left: 4px solid var(--pixel-accent);
+}
+
+.event-date {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 0.75rem;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-date .day {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.event-date .month {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+}
+
+.event-info h3 {
+    font-size: 1rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.event-info p {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.event-time {
+    font-size: 0.8rem;
+    color: var(--pixel-accent);
+    font-weight: 600;
+}
+
+/* Weather Section */
+.weather-card {
+    background: var(--white);
+    border: 1px solid var(--medium-gray);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.current-weather {
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--medium-gray);
+    margin-bottom: 1rem;
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.weather-main img {
+    width: 80px;
+    height: 80px;
+}
+
+#current-temp {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 2rem;
+    color: var(--dark-blue);
+}
+
+#weather-desc {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+    margin-top: 0.5rem;
+    text-transform: capitalize;
+}
+
+.weather-location {
+    font-size: 0.9rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+.weather-forecast h3 {
+    font-size: 1rem;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#forecast-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.forecast-item {
+    text-align: center;
+    padding: 0.75rem;
+    background: var(--light-gray);
+    border-radius: 8px;
+    flex: 1;
+}
+
+.forecast-day {
+    display: block;
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 0.25rem;
+}
+
+.forecast-temp {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.9rem;
+    color: var(--primary-blue);
+}
+
+/* Spotlights Section */
+#spotlights-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.spotlight-card {
+    background: var(--white);
+    border: 1px solid var(--medium-gray);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: var(--transition);
+}
+
+.spotlight-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.spotlight-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.spotlight-info {
+    padding: 1.25rem;
+}
+
+.spotlight-info h3 {
+    font-size: 1.1rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-phone,
+.spotlight-address {
+    font-size: 0.85rem;
+    color: var(--dark-gray);
+    margin-bottom: 0.25rem;
+}
+
+.spotlight-info a {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.spotlight-info a:hover {
+    color: var(--pixel-accent);
+}
