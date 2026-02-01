@@ -697,3 +697,441 @@ footer {
 .spotlight-info a:hover {
     color: var(--pixel-accent);
 }
+
+/* ===================================
+   JOIN PAGE STYLES
+   =================================== */
+
+.join-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.join-content {
+    display: grid;
+    gap: 2rem;
+}
+
+/* Form Section */
+.form-section {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.form-section fieldset {
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-section legend {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.8rem;
+    color: var(--primary-blue);
+    padding: 0 0.5rem;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.form-section input:focus,
+.form-section select:focus,
+.form-section textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 102, 178, 0.2);
+}
+
+.form-section input:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+}
+
+.form-section input:valid:not(:placeholder-shown) {
+    border-color: var(--completed-green, #28a745);
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: var(--pixel-accent);
+    color: var(--white);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+.submit-btn:hover {
+    background-color: var(--pixel-highlight);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+}
+
+/* Membership Cards Section */
+.membership-cards {
+    background: var(--light-gray);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.membership-cards h3 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1rem;
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Membership Card Animation - fade in on page load */
+@keyframes cardFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: var(--transition);
+    animation: cardFadeIn 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.membership-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.membership-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.membership-card h4 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.membership-card .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.membership-card p {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+}
+
+.np-card {
+    border-top: 4px solid var(--dark-gray);
+}
+
+.np-card h4 {
+    color: var(--dark-gray);
+}
+
+.bronze-card {
+    border-top: 4px solid var(--member);
+}
+
+.bronze-card h4 {
+    color: var(--member);
+}
+
+.silver-card {
+    border-top: 4px solid var(--silver);
+}
+
+.silver-card h4 {
+    color: #666;
+}
+
+.gold-card {
+    border-top: 4px solid var(--gold);
+}
+
+.gold-card h4 {
+    color: #b8860b;
+}
+
+.info-btn {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 0.5rem 1.25rem;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.6rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.info-btn:hover {
+    background-color: var(--dark-blue);
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+dialog {
+    max-width: 400px;
+    width: 90%;
+    padding: 2rem;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+}
+
+dialog h3 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.9rem;
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+    padding-right: 2rem;
+}
+
+dialog ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+dialog li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+dialog li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--pixel-accent);
+    font-weight: bold;
+}
+
+.modal-price {
+    font-size: 1.1rem;
+    color: var(--primary-blue);
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 2px solid var(--light-gray);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--dark-gray);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+    line-height: 1;
+}
+
+.close-modal:hover {
+    background-color: var(--light-gray);
+    color: var(--pixel-accent);
+    transform: rotate(90deg);
+}
+
+/* ===================================
+   THANK YOU PAGE STYLES
+   =================================== */
+
+.thankyou-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.thankyou-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.thankyou-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.thankyou-card h2 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1.2rem;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.thankyou-message {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.application-summary {
+    background: var(--light-gray);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.application-summary h3 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.85rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.result-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin-bottom: 0.25rem;
+}
+
+.result-value {
+    color: var(--text-color);
+}
+
+.next-steps {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.next-steps h3 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.85rem;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.next-steps ul {
+    list-style: none;
+    padding: 0;
+}
+
+.next-steps li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--dark-gray);
+}
+
+.next-steps li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--pixel-accent);
+}
+
+.back-home-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.7rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.back-home-btn:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-3px);
+}

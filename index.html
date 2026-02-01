@@ -36,6 +36,7 @@
     </nav>
 
     <main>
+
         <h1>Home</h1>
 
         <section class="card">
@@ -70,6 +71,23 @@
             <p><strong>Location:</strong> Bakersfield, California, United States</p>
             <p>Feel free to connect with me on social media using the links in the footer below!</p>
         </section>
+
+        <dialog id="courseModal">
+            <button id="closeModal" aria-label="Close modal">&times;</button>
+            <div id="modalContent"></div>
+        </dialog>
+
+        <!-- Loader Animation Demo (moved to bottom) -->
+        <div style="display: flex; gap: 2rem; justify-content: center; align-items: center; margin: 2.5rem 0 0 0;">
+            <div>
+                <div id="loader"></div>
+                <p style="text-align:center; font-size:0.95rem; margin-top:0.5rem;">CSS Animation Loader</p>
+            </div>
+            <div>
+                <div class="loader-t"></div>
+                <p style="text-align:center; font-size:0.95rem; margin-top:0.5rem;">CSS Transition Loader (hover me)</p>
+            </div>
+        </div>
     </main>
 
     <footer>

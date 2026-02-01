@@ -225,6 +225,26 @@
     .spotlight-card img {
         height: 120px;
     }
+
+    /* JOIN PAGE - Desktop Layout */
+    .join-content {
+        grid-template-columns: 1.5fr 1fr;
+        align-items: start;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* THANK YOU PAGE - Desktop */
+    .result-item {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .result-label {
+        margin-bottom: 0;
+    }
 }
 
 /* ===================================
@@ -272,6 +292,11 @@
 
     .spotlight-card img {
         height: 150px;
+    }
+
+    /* JOIN PAGE - Extra Large */
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

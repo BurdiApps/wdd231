@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+
+<body>
+    <h1>Advanced HTML Form</h1>
+    <form method="GET" action="confirm.html">
+        <label>Name: <input type="text" name="name" required></label><br>
+        <label>Age: <input type="number" name="age"></label><br>
+        <label>Email: <input type="email" name="email"></label><br>
+        <label>
+            Favorite Color:
+            <select name="color">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+            </select>
+        </label><br>
+        <label>
+            Subscribe to newsletter:
+            <input type="checkbox" name="subscribe" value="yes">
+        </label><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

@@ -332,3 +332,157 @@ footer p {
     margin: 0.5rem 0;
     font-size: 0.9rem;
 }
+
+/* Loader Animation Demo */
+#loader {
+    margin: 2rem;
+    width: 50px;
+    height: 50px;
+    border: 5px solid transparent;
+    border-color: #999 transparent #999 transparent;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+    box-shadow: 0 0 1rem rgb(0 0 255 / 40%);
+    position: relative;
+    display: inline-block;
+}
+
+#loader::after {
+    content: '⚙️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.25);
+    }
+}
+
+/* Loader Transition Demo */
+.loader-t {
+    margin: 2rem;
+    width: 50px;
+    height: 50px;
+    border: 5px solid transparent;
+    border-color: #999 transparent #999 transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem rgb(0 0 255 / 40%);
+    position: relative;
+    display: inline-block;
+    transition: transform 1.5s linear;
+}
+
+.loader-t::after {
+    content: '⚙️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 1.5s ease-in-out;
+    font-size: 2rem;
+}
+
+.loader-t:hover {
+    transform: rotate(360deg);
+}
+
+.loader-t:hover::after {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Modal Dialog Styles */
+dialog#courseModal {
+    max-width: 500px;
+    width: 90%;
+    background-color: var(--bg-white);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    position: relative;
+}
+
+dialog#courseModal::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+}
+
+dialog#courseModal #closeModal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-light);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    line-height: 1;
+}
+
+dialog#courseModal #closeModal:hover {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    transform: rotate(90deg);
+}
+
+#modalContent h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+#modalContent h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+#modalContent p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+#modalContent p strong {
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+#modalContent .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+#modalContent .tech-badge {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}

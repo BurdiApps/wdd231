@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join the Greater Bakersfield Chamber of Commerce - Membership application form for local businesses.">
+    <meta name="author" content="James Burdick">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="Join - Greater Bakersfield Chamber of Commerce">
+    <meta property="og:description" content="Apply for membership with the Greater Bakersfield Chamber of Commerce.">
+    <meta property="og:image" content="https://burdiapps.github.io/wdd231/chamber/images/chamber-logo.png">
+    <meta property="og:url" content="https://burdiapps.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+
+    <title>Join - Greater Bakersfield Chamber of Commerce</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/chamber-logo.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/chamber-logo.png" alt="Greater Bakersfield Chamber of Commerce Logo" width="60"
+                    height="60">
+                <div class="logo-text">
+                    <h1>Greater Bakersfield</h1>
+                    <p>Chamber of Commerce</p>
+                </div>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav id="main-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" class="active" aria-current="page">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="join-container">
+            <div class="page-header">
+                <h2>Join the Chamber</h2>
+                <p>Become a member and grow your business with us</p>
+            </div>
+
+            <div class="join-content">
+                <!-- Membership Form -->
+                <section class="form-section">
+                    <form id="membership-form" method="GET" action="thankyou.html">
+                        <fieldset>
+                            <legend>Applicant Information</legend>
+
+                            <label for="first-name">First Name *
+                                <input type="text" id="first-name" name="first-name" required
+                                    title="Please enter your first name" autocomplete="given-name" placeholder="John">
+                            </label>
+
+                            <label for="last-name">Last Name *
+                                <input type="text" id="last-name" name="last-name" required
+                                    title="Please enter your last name" autocomplete="family-name" placeholder="Doe">
+                            </label>
+
+                            <label for="org-title">Organizational Title
+                                <input type="text" id="org-title" name="org-title"
+                                    title="Enter your title within your organization (min 7 characters, letters, hyphens, spaces only)"
+                                    autocomplete="organization-title" pattern="[a-zA-Z\s\-]{7,}"
+                                    placeholder="Marketing Director">
+                            </label>
+
+                            <label for="email">Email Address *
+                                <input type="email" id="email" name="email" required
+                                    title="Please enter a valid email address" autocomplete="email"
+                                    placeholder="john.doe@example.com">
+                            </label>
+
+                            <label for="phone">Mobile Phone *
+                                <input type="tel" id="phone" name="phone" required
+                                    title="Please enter your mobile phone number" autocomplete="tel"
+                                    placeholder="(661) 555-1234">
+                            </label>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Business Information</legend>
+
+                            <label for="org-name">Business/Organization Name *
+                                <input type="text" id="org-name" name="org-name" required
+                                    title="Please enter your business or organization name" autocomplete="organization"
+                                    placeholder="Acme Corporation">
+                            </label>
+
+                            <label for="membership-level">Membership Level *
+                                <select id="membership-level" name="membership-level" required
+                                    title="Select a membership level">
+                                    <option value="">-- Select Membership Level --</option>
+                                    <option value="np">NP Membership (Non-Profit - Free)</option>
+                                    <option value="bronze">Bronze Membership</option>
+                                    <option value="silver">Silver Membership</option>
+                                    <option value="gold">Gold Membership</option>
+                                </select>
+                            </label>
+
+                            <label for="description">Business Description
+                                <textarea id="description" name="description" rows="4"
+                                    title="Describe your business or organization"
+                                    placeholder="Tell us about your business..."></textarea>
+                            </label>
+                        </fieldset>
+
+                        <!-- Hidden Timestamp Field -->
+                        <input type="hidden" id="timestamp" name="timestamp">
+
+                        <button type="submit" class="submit-btn">Submit Application</button>
+                    </form>
+                </section>
+
+                <!-- Membership Level Cards -->
+                <section class="membership-cards">
+                    <h3>Membership Levels</h3>
+                    <div class="cards-container">
+                        <div class="membership-card np-card">
+                            <h4>NP Membership</h4>
+                            <p class="price">Free</p>
+                            <p>For non-profit organizations</p>
+                            <button class="info-btn" data-modal="np-modal">Learn More</button>
+                        </div>
+
+                        <div class="membership-card bronze-card">
+                            <h4>Bronze</h4>
+                            <p class="price">$50/year</p>
+                            <p>Essential business benefits</p>
+                            <button class="info-btn" data-modal="bronze-modal">Learn More</button>
+                        </div>
+
+                        <div class="membership-card silver-card">
+                            <h4>Silver</h4>
+                            <p class="price">$150/year</p>
+                            <p>Enhanced visibility & perks</p>
+                            <button class="info-btn" data-modal="silver-modal">Learn More</button>
+                        </div>
+
+                        <div class="membership-card gold-card">
+                            <h4>Gold</h4>
+                            <p class="price">$300/year</p>
+                            <p>Premium benefits & spotlight</p>
+                            <button class="info-btn" data-modal="gold-modal">Learn More</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <dialog id="np-modal">
+            <button class="close-modal" aria-label="Close">&times;</button>
+            <h3>NP Membership Benefits</h3>
+            <ul>
+                <li>Directory listing</li>
+                <li>Monthly newsletter</li>
+                <li>Networking event access</li>
+                <li>Community recognition</li>
+            </ul>
+            <p class="modal-price">Cost: <strong>Free</strong></p>
+        </dialog>
+
+        <dialog id="bronze-modal">
+            <button class="close-modal" aria-label="Close">&times;</button>
+            <h3>Bronze Membership Benefits</h3>
+            <ul>
+                <li>Directory listing with logo</li>
+                <li>Monthly newsletter</li>
+                <li>Networking event access</li>
+                <li>10% event discount</li>
+                <li>Business referrals</li>
+            </ul>
+            <p class="modal-price">Cost: <strong>$50/year</strong></p>
+        </dialog>
+
+        <dialog id="silver-modal">
+            <button class="close-modal" aria-label="Close">&times;</button>
+            <h3>Silver Membership Benefits</h3>
+            <ul>
+                <li>All Bronze benefits</li>
+                <li>Featured directory placement</li>
+                <li>Social media promotion</li>
+                <li>25% event discount</li>
+                <li>Business training workshops</li>
+                <li>Ribbon cutting ceremony</li>
+            </ul>
+            <p class="modal-price">Cost: <strong>$150/year</strong></p>
+        </dialog>
+
+        <dialog id="gold-modal">
+            <button class="close-modal" aria-label="Close">&times;</button>
+            <h3>Gold Membership Benefits</h3>
+            <ul>
+                <li>All Silver benefits</li>
+                <li>Homepage spotlight position</li>
+                <li>Premium advertising space</li>
+                <li>50% event discount</li>
+                <li>Exclusive VIP events</li>
+                <li>Priority business referrals</li>
+                <li>Annual awards recognition</li>
+            </ul>
+            <p class="modal-price">Cost: <strong>$300/year</strong></p>
+        </dialog>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <address>
+                    <p>1725 Eye Street</p>
+                    <p>Bakersfield, CA 93301</p>
+                    <p>Phone: <a href="tel:6613274421">(661) 327-4421</a></p>
+                    <p>Email: <a href="mailto:info@bakochamber.com">info@bakochamber.com</a></p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Member Benefits</a></li>
+                    <li><a href="#">Events Calendar</a></li>
+                    <li><a href="#">Business Resources</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Greater Bakersfield Chamber of Commerce. All rights reserved.</p>
+            <p>WDD 231 Project | James Burdick</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/join.js"></script>
+</body>
+
+</html>

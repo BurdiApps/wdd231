@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Confirmation</title>
+</head>
+
+<body>
+    <h1>Form Confirmation</h1>
+    <div id="results"></div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        let output = '';
+        for (const [key, value] of params.entries()) {
+            output += `<p><strong>${key}:</strong> ${value}</p>`;
+        }
+        document.getElementById('results').innerHTML = output;
+    </script>
+</body>
+
+</html>

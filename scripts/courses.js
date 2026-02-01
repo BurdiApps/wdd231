@@ -79,6 +79,43 @@ const courses = [
     }
 ];
 
+// Display course details in modal
+function showCourseModal(course) {
+    const modal = document.getElementById('courseModal');
+    const modalContent = document.getElementById('modalContent');
+
+    // Build technology badges HTML
+    const techBadges = course.technology.map(tech =>
+        `<span class="tech-badge">${tech}</span>`
+    ).join('');
+
+    // Populate modal content
+    modalContent.innerHTML = `
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits:</strong> ${course.credits}</p>
+        <p><strong>Description:</strong> ${course.description}</p>
+        <p><strong>Certificate:</strong> ${course.certificate}</p>
+        <p><strong>Technology Stack:</strong></p>
+        <div class="tech-stack">${techBadges}</div>
+    `;
+
+    // Show the modal
+    modal.showModal();
+
+    // Close button functionality
+    document.getElementById('closeModal').onclick = () => {
+        modal.close();
+    };
+
+    // Click outside to close
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.close();
+        }
+    });
+}
+
 // Display courses based on filter
 function displayCourses(filter = 'all') {
     const container = document.getElementById('courses-container');
@@ -101,6 +138,22 @@ function displayCourses(filter = 'all') {
             <p class="course-title">${course.title}</p>
             <p class="course-credits">${course.credits} credits</p>
         `;
+
+        // Add click event to show modal
+        courseCard.addEventListener('click', () => {
+            showCourseModal(course);
+        });
+
+        // Make it keyboard accessible
+        courseCard.setAttribute('tabindex', '0');
+        courseCard.setAttribute('role', 'button');
+        courseCard.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                showCourseModal(course);
+            }
+        });
+
         container.appendChild(courseCard);
     });
 
