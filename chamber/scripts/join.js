@@ -5,7 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set timestamp
     const timestampField = document.getElementById('timestamp');
     if (timestampField) {
-        timestampField.value = new Date().toISOString();
+        const now = new Date().toISOString();
+        timestampField.value = now;
+        console.log('Timestamp set:', now);
+    } else {
+        console.error('Timestamp field not found!');
     }
 
     // Set current year and last modified

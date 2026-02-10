@@ -1135,3 +1135,274 @@ dialog li::before {
     background-color: var(--dark-blue);
     transform: translateY(-3px);
 }
+
+/* ===================================
+   DISCOVER PAGE STYLES
+   =================================== */
+
+/* Visitor Message Banner */
+.visitor-message {
+    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+    color: var(--white);
+    padding: 1rem;
+    position: relative;
+    display: none;
+    animation: slideDown 0.5s ease-out;
+}
+
+.visitor-message.show {
+    display: block;
+}
+
+.visitor-message.hide {
+    animation: slideUp 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.message-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.message-icon {
+    font-size: 1.5rem;
+}
+
+.message-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#close-message {
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    line-height: 1;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+#close-message:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Discover Container */
+.discover-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Demographics Section */
+.demographics-section {
+    margin-bottom: 3rem;
+}
+
+.demographics-section h3 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1rem;
+    color: var(--dark-blue);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.demographics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.demo-card {
+    background: var(--light-gray);
+    padding: 1.25rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.demo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.demo-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.demo-card h4 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.6rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.demo-card p {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+/* Attractions Section */
+.attractions-section h3 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1rem;
+    color: var(--dark-blue);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Attractions Grid - Mobile (Small Screens) */
+.attractions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+    gap: 1.5rem;
+}
+
+.attractions-grid .attraction-card:nth-child(1) {
+    grid-area: card1;
+}
+
+.attractions-grid .attraction-card:nth-child(2) {
+    grid-area: card2;
+}
+
+.attractions-grid .attraction-card:nth-child(3) {
+    grid-area: card3;
+}
+
+.attractions-grid .attraction-card:nth-child(4) {
+    grid-area: card4;
+}
+
+.attractions-grid .attraction-card:nth-child(5) {
+    grid-area: card5;
+}
+
+.attractions-grid .attraction-card:nth-child(6) {
+    grid-area: card6;
+}
+
+.attractions-grid .attraction-card:nth-child(7) {
+    grid-area: card7;
+}
+
+.attractions-grid .attraction-card:nth-child(8) {
+    grid-area: card8;
+}
+
+/* Attraction Card */
+.attraction-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: var(--transition);
+}
+
+.attraction-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.attraction-card figure {
+    margin: 0;
+    overflow: hidden;
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.attraction-info {
+    padding: 1.25rem;
+}
+
+.attraction-info h2 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.75rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.attraction-info address {
+    font-style: normal;
+    font-size: 0.85rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.attraction-info p {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.learn-more-btn {
+    background-color: var(--pixel-accent);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.6rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.learn-more-btn:hover {
+    background-color: var(--pixel-highlight);
+    transform: scale(1.05);
+}

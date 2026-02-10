@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description"
+        content="Beauty & Fashion Hub - Your personal tool for organizing beauty routines, fashion collections, appointments, and wishlists.">
+    <meta name="author" content="Your Name">
+    <title>Beauty & Fashion Hub</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Beauty & Fashion Hub</h1>
+        <div class="mini">A magic wardrobe, made with love for [Her Name]</div>
+    </header>
+    <nav>
+        <a href="index.html" class="nav-btn">Makeup</a>
+        <a href="clothing.html" class="nav-btn">Closet</a>
+        <a href="bags.html" class="nav-btn">Bags</a>
+        <a href="hair.html" class="nav-btn">Hair Styles</a>
+        <a href="nails.html" class="nav-btn">Nails</a>
+        <a href="skincare.html" class="nav-btn">Skincare</a>
+        <a href="botox.html" class="nav-btn">Botox & Treatments</a>
+        <a href="wishlist.html" class="nav-btn">Wishlist</a>
+        <a href="appointments.html" class="nav-btn">Calendar</a>
+
+    </nav>
+    <main>
+        <!-- Calendar/Appointments Section -->
+        <section id="appointments" class="section">
+            <h2>Calendar & Appointments</h2>
+            <div class="mini">Book, plan, and never miss a treat or special day!</div>
+            <div id="appt-alerts"></div>
+            <div class="calendar-controls">
+                <button id="cal-prev">&lt; Prev</button>
+                <span id="calendar-label"></span>
+                <button id="cal-next">Next &gt;</button>
+            </div>
+            <div class="calendar-headers">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div id="calendar-days"></div>
+            <h3>Add Appointment or Gift Date</h3>
+            <form id="appointments-form" class="collection-form" autocomplete="off">
+                <select id="appt-type" required>
+                    <option value="">Type</option>
+                    <option value="Hair">Hair</option>
+                    <option value="Nail">Nails</option>
+                    <option value="Massage">Massage</option>
+                    <option value="Other">Beauty Other</option>
+                    <option value="Gift">Gift Reminder</option>
+                </select>
+                <input type="date" id="appt-date" required>
+                <input type="text" id="appt-location" placeholder="Salon/Spa/Store/Place">
+                <input type="text" id="appt-notes" placeholder="Stylist, special, for...">
+                <button type="submit">Add to Calendar</button>
+            </form>
+            <ul id="appointments-list"></ul>
+        </section>
+        <!-- Makeup Section -->
+        <section id="makeup" class="section active">
+            <h2>Makeup Looks</h2>
+            <div class="mini">Add your signature looks—or get inspired and wishlist favorites!</div>
+            <div class="inspo-gallery" id="makeup-inspo"></div>
+
+            <div class="mini" style="margin-top:0.3em;margin-bottom:0.4em;">Save TikTok, YouTube, IG, any link:</div>
+            <form id="makeup-link-form" class="collection-form"
+                style="margin-bottom:0.5em;gap:0.5em;display:flex;flex-wrap:wrap;align-items:center;">
+                <input type="text" id="makeup-link-title" placeholder="What/where?">
+                <input type="url" id="makeup-link-url" placeholder="Paste link here" required>
+                <button type="submit" style="padding:.38em 1em;white-space:nowrap;">Add Link</button>
+            </form>
+            <ul id="makeup-links" class="link-inspo-list"></ul>
+
+            <ul id="makeup-list"></ul>
+            <form id="makeup-form" class="collection-form" autocomplete="off">
+                <input type="text" id="makeup-name" placeholder="Look or product..." required>
+                <input type="file" accept="image/*" id="makeup-upload">
+                <input type="text" id="makeup-photo" placeholder="Paste image URL (optional)">
+                <div><img id="makeup-preview" class="preview-img" /></div>
+                <textarea id="makeup-notes" placeholder="Notes (products, when, vibes...)"></textarea>
+                <label><input type="checkbox" id="makeup-wishlist"> Add to Wishlist</label><br>
+                <button type="submit">Add Look</button>
+            </form>
+        </section>
+        <!-- Cotton Closet Section -->
+        <section id="clothes" class="section">
+            <h2>Cotton Closet</h2>
+            <div class="mini">Find beautiful 100% cotton, or add your faves here.</div>
+            <div class="inspo-gallery" id="cotton-inspo"></div>
+            <div class="mini" style="margin-top:0.3em;margin-bottom:0.4em;">Save outfit links, reviews, TikToks:</div>
+            <form id="clothes-link-form" class="collection-form"
+                style="margin-bottom:0.5em;gap:0.5em;display:flex;flex-wrap:wrap;align-items:center;">
+                <input type="text" id="clothes-link-title" placeholder="What/where?">
+                <input type="url" id="clothes-link-url" placeholder="Paste link here" required>
+                <button type="submit" style="padding:.38em 1em;">Add Link</button>
+            </form>
+            <ul id="clothes-links" class="link-inspo-list"></ul>
+
+            <ul id="clothes-list"></ul>
+            <form id="clothes-form" class="collection-form" autocomplete="off">
+                <input type="text" id="clothes-name" placeholder="Description of item..." required>
+                <input type="file" accept="image/*" id="clothes-upload">
+                <input type="text" id="clothes-photo" placeholder="Paste image URL (optional)">
+                <div><img id="clothes-preview" class="preview-img" /></div>
+                <textarea id="clothes-notes" placeholder="Where, how to style, notes..."></textarea>
+                <label><input type="checkbox" id="clothes-wishlist"> Add to Wishlist</label><br>
+                <button type="submit">Add Item</button>
+            </form>
+        </section>
+        <!-- Coach Bags Section -->
+        <section id="bags" class="section">
+            <h2>Coach Bag Gallery</h2>
+            <div class="mini">Add your collection or wishlist dreams!</div>
+            <div class="inspo-gallery" id="bags-inspo"></div>
+            <div class="mini" style="margin-top:0.3em;margin-bottom:0.4em;">Favorite links: unboxings, resellers,
+                styles:</div>
+
+    </main>
+    <footer>
+        <p>&copy; 2026 Beauty & Fashion Hub. All rights reserved.</p>
+        <p><a href="siteplan.html">Site Plan</a> | <a href="attributions.html">Attributions</a></p>
+    </footer>
+    <script src="scripts/inspo.js"></script>
+    <script src="scripts/storage.js"></script>
+    <script src="scripts/forms.js"></script>
+    <script src="scripts/calendar.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

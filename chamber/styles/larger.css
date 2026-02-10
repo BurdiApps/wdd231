@@ -73,6 +73,41 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* ===================================
+       DISCOVER PAGE - Medium Screens (641px to 1024px)
+       =================================== */
+
+    /* Demographics grid - 4 columns on tablet */
+    .demographics-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Medium screen grid layout - 2 columns with varied placement */
+    .attractions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "card1 card2"
+            "card3 card3"
+            "card4 card5"
+            "card6 card6"
+            "card7 card8";
+        gap: 2rem;
+    }
+
+    /* Image hover effects - only for non-mobile */
+    .attraction-card img {
+        transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .attraction-card:hover img {
+        transform: scale(1.08);
+        filter: brightness(1.1) saturate(1.2);
+    }
+
+    .attraction-info h2 {
+        font-size: 0.85rem;
+    }
+
     /* HOME PAGE - Tablet Styles */
 
     /* Hero */
@@ -141,6 +176,49 @@
 
     .page-header h2 {
         font-size: 3rem;
+    }
+
+    /* ===================================
+       DISCOVER PAGE - Large Screens (1025px and up)
+       =================================== */
+
+    .discover-container {
+        padding: 3rem 2rem;
+    }
+
+    .demographics-section h3,
+    .attractions-section h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Large screen grid layout - 4 columns with creative placement */
+    .attractions-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card1 card2 card3"
+            "card4 card5 card5 card3"
+            "card4 card6 card7 card8";
+        gap: 2rem;
+    }
+
+    /* Enhanced hover effects for larger screens */
+    .attraction-card:hover img {
+        transform: scale(1.1);
+        filter: brightness(1.15) saturate(1.25);
+    }
+
+    .attraction-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .attraction-info h2 {
+        font-size: 0.9rem;
+    }
+
+    .learn-more-btn {
+        font-size: 0.65rem;
+        padding: 0.85rem 1.75rem;
     }
 
     .page-header p {
