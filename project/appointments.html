@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Goddess Beauty - Schedule and manage your beauty appointments, salon visits, and self-care reminders.">
+    <meta name="author" content="Isis Burdi">
+    <title>Goddess Beauty | Appointments</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Goddess Beauty | Appointments">
+    <meta property="og:description"
+        content="Schedule and manage your beauty appointments, salon visits, and self-care reminders.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Goddess Beauty</h1>
+            <p class="tagline">Your personal beauty &amp; fashion hub</p>
+        </div>
+        <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </header>
+
+    <nav id="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="appointments.html" class="nav-link active">Appointments</a>
+        <a href="wishlist.html" class="nav-link">Wishlist</a>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h2>Calendar &amp; Appointments</h2>
+            <p>Book, plan, and never miss a treat or special day!</p>
+        </section>
+
+        <!-- Calendar -->
+        <section class="calendar-section">
+            <div class="calendar-controls">
+                <button id="cal-prev" aria-label="Previous month">&lt; Prev</button>
+                <span id="calendar-label"></span>
+                <button id="cal-next" aria-label="Next month">Next &gt;</button>
+            </div>
+            <div class="calendar-headers">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div id="calendar-days"></div>
+        </section>
+
+        <!-- Appointment Form -->
+        <section class="form-section">
+            <h2>Book an Appointment</h2>
+            <form id="appointment-form" action="thankyou.html" method="GET" class="collection-form">
+                <label for="appt-name">Your Name</label>
+                <input type="text" id="appt-name" name="name" placeholder="Your name" required>
+
+                <label for="appt-type">Appointment Type</label>
+                <select id="appt-type" name="type" required>
+                    <option value="">Select type...</option>
+                    <option value="Hair">Hair</option>
+                    <option value="Nails">Nails</option>
+                    <option value="Skincare">Skincare</option>
+                    <option value="Massage">Massage</option>
+                    <option value="Botox">Botox / Treatments</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="appt-date">Date</label>
+                <input type="date" id="appt-date" name="date" required>
+
+                <label for="appt-location">Location</label>
+                <input type="text" id="appt-location" name="location" placeholder="Salon / Spa / Clinic">
+
+                <label for="appt-notes">Notes</label>
+                <textarea id="appt-notes" name="notes" placeholder="Stylist name, special requests..."></textarea>
+
+                <button type="submit" class="btn-primary">Book Appointment</button>
+            </form>
+        </section>
+
+        <!-- Saved Appointments -->
+        <section class="saved-section">
+            <h2>Your Appointments</h2>
+            <ul id="appointments-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Goddess Beauty. All rights reserved.</p>
+        <p>
+            <a href="siteplan.html">Site Plan</a> |
+            <a href="attributions.html">Attributions</a> |
+            <a href="#" id="video-link">Project Video</a>
+        </p>
+    </footer>
+
+    <script type="module" src="scripts/appointments.mjs"></script>
+</body>
+
+</html>

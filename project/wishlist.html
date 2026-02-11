@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Goddess Beauty - Your beauty and fashion wishlist. Save items you love and track what you've bought.">
+    <meta name="author" content="Isis Burdi">
+    <title>Goddess Beauty | Wishlist</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Goddess Beauty | Wishlist">
+    <meta property="og:description"
+        content="Your beauty and fashion wishlist. Save items you love and track what you've bought.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Goddess Beauty</h1>
+            <p class="tagline">Your personal beauty &amp; fashion hub</p>
+        </div>
+        <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </header>
+
+    <nav id="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="appointments.html" class="nav-link">Appointments</a>
+        <a href="wishlist.html" class="nav-link active">Wishlist</a>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h2>Your Wishlist</h2>
+            <p>Make a list and check it twice! Click &ldquo;Mark Bought&rdquo; when you spoil yourself 🎉</p>
+        </section>
+
+        <!-- Wishlist Filter -->
+        <section class="filter-section">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="bought">Bought</button>
+                <button class="filter-btn" data-filter="pending">Still Want</button>
+            </div>
+        </section>
+
+        <!-- Add Wishlist Item -->
+        <section class="add-product-section">
+            <button id="add-wish-toggle" class="btn-primary" type="button">＋ Add an Item</button>
+            <div id="add-wish-panel" class="add-product-panel" hidden>
+                <form id="add-wish-form" class="add-product-form">
+                    <input type="text" id="wish-name" placeholder="Item name (e.g. Morphe brushes)" required>
+                    <select id="wish-category">
+                        <option value="general">Category...</option>
+                        <option value="makeup">Makeup</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="bags">Bags</option>
+                        <option value="hair">Hair</option>
+                        <option value="nails">Nails</option>
+                        <option value="skincare">Skincare</option>
+                        <option value="treatments">Treatments</option>
+                    </select>
+                    <input type="text" id="wish-price" placeholder="Price or 'varies'">
+                    <input type="url" id="wish-photo" placeholder="Image URL (optional)">
+                    <div class="add-product-actions">
+                        <button type="submit" class="btn-primary">Add to Wishlist</button>
+                        <button type="button" id="add-wish-cancel" class="btn-danger">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Wishlist Items -->
+        <section class="wishlist-section">
+            <ul id="wishlist-items"></ul>
+            <p id="wishlist-empty" class="empty-message" hidden>Your wishlist is empty. Add items above or browse the <a
+                    href="index.html">collections</a>!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Goddess Beauty. All rights reserved.</p>
+        <p>
+            <a href="siteplan.html">Site Plan</a> |
+            <a href="attributions.html">Attributions</a> |
+            <a href="#" id="video-link">Project Video</a>
+        </p>
+    </footer>
+
+    <script type="module" src="scripts/wishlist.mjs"></script>
+</body>
+
+</html>
