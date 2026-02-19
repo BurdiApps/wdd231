@@ -1,0 +1,70 @@
+/* =======================================================
+   RESPONSIVE – Larger screens (>= 640px)
+   Goddess Beauty – larger.css
+   ======================================================= */
+header h1 {
+    font-size: 2.2em;
+}
+
+/* Show nav as horizontal bar, hide hamburger */
+#hamburger {
+    display: none;
+}
+
+#main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    position: sticky;
+    top: 0;
+}
+
+#main-nav .nav-link {
+    border-bottom: none;
+    border-radius: var(--radius-sm);
+    padding: 0.5em 1.2em;
+}
+
+.hero h2 {
+    font-size: 2.2em;
+}
+
+.products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.gb-product-tile img {
+    height: 220px;
+}
+
+/* Form side-by-side */
+.collection-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 var(--spacing-sm);
+}
+
+.collection-form label:nth-of-type(5),
+.collection-form textarea,
+.collection-form .gb-btn-action {
+    grid-column: 1 / -1;
+}
+
+/* =======================================================
+   RESPONSIVE – Wide screens (>= 900px)
+   ======================================================= */
+@media (min-width: 900px) {
+    main {
+        max-width: 1100px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .wishlist-item {
+        padding: 1em 1.2em;
+    }
+}

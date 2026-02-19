@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Goddess Beauty - Your personal hub for organizing beauty routines, fashion collections, appointments, and wishlists.">
-    <meta name="author" content="Isis Burdi">
+    <meta name="author" content="James Burdick">
     <title>Goddess Beauty | Home</title>
 
     <!-- Favicon -->
@@ -18,6 +18,8 @@
     <meta property="og:description"
         content="Your personal hub for organizing beauty routines, fashion collections, and appointments.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://burdiapps.github.io/wdd231/project/images/og-image.png">
+    <meta property="og:url" content="https://burdiapps.github.io/wdd231/project/index.html">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +29,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 640px)">
 </head>
 
 <body>
@@ -69,7 +72,7 @@
 
         <!-- Add Product Form -->
         <section class="add-product-section">
-            <button id="add-product-toggle" class="btn-primary" type="button">＋ Add to Collection</button>
+            <button id="add-product-toggle" class="gb-btn-action" type="button">＋ Add to Collection</button>
             <div id="add-product-panel" class="add-product-panel" hidden>
                 <form id="add-product-form" class="add-product-form">
                     <input type="text" id="new-name" placeholder="Product name" required>
@@ -87,8 +90,8 @@
                     <input type="text" id="new-price" placeholder="Price or 'varies'">
                     <input type="text" id="new-notes" placeholder="Notes (optional)">
                     <div class="add-product-actions">
-                        <button type="submit" class="btn-primary">Add Product</button>
-                        <button type="button" id="add-product-cancel" class="btn-danger">Cancel</button>
+                        <button type="submit" class="gb-btn-action">Add Product</button>
+                        <button type="button" id="add-product-cancel" class="gb-btn-cancel">Cancel</button>
                     </div>
                 </form>
             </div>
@@ -118,7 +121,7 @@
                     <option value="outfit">Outfit</option>
                     <option value="aesthetic">Aesthetic</option>
                 </select>
-                <button type="submit" class="btn-primary">📌 Pin It</button>
+                <button type="submit" class="gb-btn-action">📌 Pin It</button>
             </form>
 
             <div id="inspo-board" class="inspo-board"></div>
@@ -126,16 +129,17 @@
 
         <!-- Modal -->
         <dialog id="product-modal">
-            <div class="modal-content">
-                <button id="modal-close" class="modal-close" aria-label="Close modal">&times;</button>
-                <img id="modal-img" src="" alt="" width="300" height="300" loading="lazy">
+            <div class="gb-dialog-body">
+                <button id="modal-close" class="gb-dialog-close" aria-label="Close modal">&times;</button>
+                <img id="modal-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    alt="Product image" width="300" height="300" loading="lazy">
                 <h3 id="modal-name"></h3>
                 <p id="modal-category" class="modal-category"></p>
                 <p id="modal-notes"></p>
                 <p id="modal-price" class="modal-price"></p>
-                <div class="modal-btn-row">
-                    <button id="modal-wishlist-btn" class="btn-primary">Add to Wishlist</button>
-                    <button id="modal-delete-btn" class="btn-danger" hidden>Delete from Collection</button>
+                <div class="gb-dialog-actions">
+                    <button id="modal-wishlist-btn" class="gb-btn-action">Add to Wishlist</button>
+                    <button id="modal-delete-btn" class="gb-btn-cancel" hidden>Delete from Collection</button>
                 </div>
             </div>
         </dialog>
@@ -146,7 +150,8 @@
         <p>
             <a href="siteplan.html">Site Plan</a> |
             <a href="attributions.html">Attributions</a> |
-            <a href="#" id="video-link">Project Video</a>
+            <a href="https://youtu.be/tDC7Mw4gbhY" id="video-link" target="_blank" rel="noopener noreferrer">Project
+                Video</a>
         </p>
     </footer>
 

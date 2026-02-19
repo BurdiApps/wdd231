@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Goddess Beauty - Your beauty and fashion wishlist. Save items you love and track what you've bought.">
-    <meta name="author" content="Isis Burdi">
+    <meta name="author" content="James Burdick">
     <title>Goddess Beauty | Wishlist</title>
 
     <!-- Favicon -->
@@ -18,6 +18,8 @@
     <meta property="og:description"
         content="Your beauty and fashion wishlist. Save items you love and track what you've bought.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://burdiapps.github.io/wdd231/project/images/og-image.png">
+    <meta property="og:url" content="https://burdiapps.github.io/wdd231/project/wishlist.html">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +29,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 640px)">
 </head>
 
 <body>
@@ -61,7 +64,7 @@
 
         <!-- Add Wishlist Item -->
         <section class="add-product-section">
-            <button id="add-wish-toggle" class="btn-primary" type="button">＋ Add an Item</button>
+            <button id="add-wish-toggle" class="gb-btn-action" type="button">＋ Add an Item</button>
             <div id="add-wish-panel" class="add-product-panel" hidden>
                 <form id="add-wish-form" class="add-product-form">
                     <input type="text" id="wish-name" placeholder="Item name (e.g. Morphe brushes)" required>
@@ -78,8 +81,8 @@
                     <input type="text" id="wish-price" placeholder="Price or 'varies'">
                     <input type="url" id="wish-photo" placeholder="Image URL (optional)">
                     <div class="add-product-actions">
-                        <button type="submit" class="btn-primary">Add to Wishlist</button>
-                        <button type="button" id="add-wish-cancel" class="btn-danger">Cancel</button>
+                        <button type="submit" class="gb-btn-action">Add to Wishlist</button>
+                        <button type="button" id="add-wish-cancel" class="gb-btn-cancel">Cancel</button>
                     </div>
                 </form>
             </div>
@@ -98,7 +101,8 @@
         <p>
             <a href="siteplan.html">Site Plan</a> |
             <a href="attributions.html">Attributions</a> |
-            <a href="#" id="video-link">Project Video</a>
+            <a href="https://youtu.be/tDC7Mw4gbhY" id="video-link" target="_blank" rel="noopener noreferrer">Project
+                Video</a>
         </p>
     </footer>
 

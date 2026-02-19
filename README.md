@@ -1,7 +1,5 @@
 # WDD 231 - Web Frontend Development I
-## Course Home Page
-
-This is my WDD 231 course home page, featuring a responsive design with a hamburger menu, dynamic course filtering, and social media integration.
+## This course I learn more advanced CSS and JavaScript concepts
 
 ---
 
@@ -11,9 +9,11 @@ This is my WDD 231 course home page, featuring a responsive design with a hambur
 - [Site Plan Document](https://burdi.github.io/wdd231/project/siteplan.html)
 
 ---
-
-**To submit your site plan:**
-Paste this link in Canvas:
+## Site Plan
 
 https://burdi.github.io/wdd231/project/siteplan.html
+
+## Goddess Beauty Demo Video
+
+https://youtu.be/tDC7Mw4gbhY
 

@@ -81,7 +81,7 @@ header h1 {
 header .tagline {
     margin: 0.2em 0 0;
     font-size: 0.95em;
-    color: var(--secondary);
+    color: #c19a6b;
     font-weight: 300;
 }
 
@@ -279,16 +279,16 @@ h3 {
     flex: 1 1 100%;
 }
 
-.add-product-actions .btn-primary {
+.add-product-actions .gb-btn-action {
     flex: 1;
 }
 
-.add-product-actions .btn-danger {
+.add-product-actions .gb-btn-cancel {
     flex: 0 0 auto;
 }
 
-/* Custom product badge */
-.custom-badge {
+/* Custom product tag */
+.gb-tag {
     display: block;
     font-size: 0.7em;
     font-weight: 600;
@@ -299,20 +299,20 @@ h3 {
 }
 
 /* Modal button row */
-.modal-btn-row {
+.gb-dialog-actions {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
     margin-top: var(--spacing-sm);
 }
 
-/* Delete / Danger button */
-.btn-danger {
+/* Delete / Cancel button */
+.gb-btn-cancel {
     padding: 0.55em 1.4em;
-    border: 2px solid var(--bad);
+    border: 2px solid #a34545;
     border-radius: var(--radius-sm);
     background: transparent;
-    color: var(--bad);
+    color: #a34545;
     font-weight: 600;
     font-size: 0.95em;
     font-family: var(--font-body);
@@ -320,12 +320,12 @@ h3 {
     transition: all 0.25s;
 }
 
-.btn-danger:hover {
-    background: var(--bad);
+.gb-btn-cancel:hover {
+    background: #a34545;
     color: #fff;
 }
 
-.product-card {
+.gb-product-tile {
     background: var(--card);
     border-radius: var(--radius-md);
     overflow: hidden;
@@ -334,31 +334,31 @@ h3 {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.product-card:hover {
+.gb-product-tile:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 30px rgba(139, 77, 107, 0.2);
 }
 
-.product-card img {
+.gb-product-tile img {
     width: 100%;
     height: 180px;
     object-fit: cover;
 }
 
-.product-card h3 {
+.gb-product-tile h3 {
     font-size: 1em;
     margin: 0.6em 0.8em 0.2em;
     color: var(--text);
 }
 
-.product-card .product-category {
+.gb-product-tile .product-category {
     font-size: 0.8em;
     color: var(--gray);
     margin: 0 0.8em;
     text-transform: capitalize;
 }
 
-.product-card .product-price {
+.gb-product-tile .product-price {
     font-weight: 700;
     color: var(--primary);
     margin: 0.3em 0.8em 0.8em;
@@ -392,13 +392,13 @@ h3 {
     }
 }
 
-.modal-content {
+.gb-dialog-body {
     padding: var(--spacing-md);
     text-align: center;
     position: relative;
 }
 
-.modal-content img {
+.gb-dialog-body img {
     width: 100%;
     max-height: 280px;
     object-fit: cover;
@@ -406,7 +406,7 @@ h3 {
     margin-bottom: var(--spacing-sm);
 }
 
-.modal-content h3 {
+.gb-dialog-body h3 {
     font-family: var(--font-heading);
     font-size: 1.4em;
     color: var(--text);
@@ -427,7 +427,7 @@ h3 {
     margin: 0.5em 0;
 }
 
-.modal-close {
+.gb-dialog-close {
     position: absolute;
     top: 10px;
     right: 14px;
@@ -441,12 +441,12 @@ h3 {
     transition: color 0.2s;
 }
 
-.modal-close:hover {
+.gb-dialog-close:hover {
     color: var(--bad);
 }
 
-/* ===== Primary Button ===== */
-.btn-primary {
+/* ===== Primary Action Button ===== */
+.gb-btn-action {
     padding: 0.65em 1.6em;
     border: none;
     border-radius: var(--radius-sm);
@@ -459,13 +459,13 @@ h3 {
     transition: all 0.25s;
 }
 
-.btn-primary:hover {
+.gb-btn-action:hover {
     background: var(--primary-dark);
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(139, 77, 107, 0.3);
 }
 
-.btn-primary:disabled {
+.gb-btn-action:disabled {
     background: var(--gray);
     cursor: not-allowed;
     transform: none;
@@ -615,7 +615,7 @@ h3 {
     resize: vertical;
 }
 
-.collection-form .btn-primary {
+.collection-form .gb-btn-action {
     margin-top: var(--spacing-sm);
     width: 100%;
 }
@@ -771,7 +771,7 @@ h3 {
     margin-bottom: var(--spacing-lg);
 }
 
-.detail-card {
+.gb-detail-panel {
     background: var(--card);
     border-radius: var(--radius-lg);
     padding: var(--spacing-lg) var(--spacing-md);
@@ -781,14 +781,14 @@ h3 {
     text-align: left;
 }
 
-.detail-card h3 {
+.gb-detail-panel h3 {
     font-family: var(--font-heading);
     font-size: 1.4em;
     text-align: center;
     margin-bottom: 0.8em;
 }
 
-.detail-card p {
+.gb-detail-panel p {
     margin: 0.5em 0;
 }
 
@@ -798,6 +798,13 @@ h3 {
     border-top: 1px solid var(--accent);
     color: var(--gray);
     font-style: italic;
+}
+
+/* ===== Back link (thankyou page) ===== */
+.back-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    text-decoration: none;
 }
 
 /* ===== Empty / Error Messages ===== */
@@ -955,7 +962,7 @@ h3 {
     .inspo-form input[type="url"],
     .inspo-form input[type="text"],
     .inspo-form select,
-    .inspo-form .btn-primary {
+    .inspo-form .gb-btn-action {
         flex: 1 1 100%;
     }
 
@@ -988,74 +995,4 @@ footer a:hover {
     color: var(--accent);
 }
 
-/* =======================================================
-   RESPONSIVE – Larger screens (>= 640px)
-   ======================================================= */
-@media (min-width: 640px) {
-    header h1 {
-        font-size: 2.2em;
-    }
-
-    /* Show nav as horizontal bar, hide hamburger */
-    #hamburger {
-        display: none;
-    }
-
-    #main-nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: var(--spacing-xs);
-        padding: var(--spacing-xs) var(--spacing-sm);
-        position: sticky;
-        top: 0;
-    }
-
-    #main-nav .nav-link {
-        border-bottom: none;
-        border-radius: var(--radius-sm);
-        padding: 0.5em 1.2em;
-    }
-
-    .hero h2 {
-        font-size: 2.2em;
-    }
-
-    .products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-
-    .product-card img {
-        height: 220px;
-    }
-
-    /* Form side-by-side */
-    .collection-form {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0 var(--spacing-sm);
-    }
-
-    .collection-form label:nth-of-type(5),
-    .collection-form textarea,
-    .collection-form .btn-primary {
-        grid-column: 1 / -1;
-    }
-}
-
-/* =======================================================
-   RESPONSIVE – Wide screens (>= 900px)
-   ======================================================= */
-@media (min-width: 900px) {
-    main {
-        max-width: 1100px;
-    }
-
-    .products-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .wishlist-item {
-        padding: 1em 1.2em;
-    }
-}
+/* Larger-screen styles are in larger.css */

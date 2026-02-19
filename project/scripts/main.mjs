@@ -50,16 +50,16 @@ function renderProducts(products) {
         return;
     }
     productsGrid.innerHTML = products.map(product => `
-        <article class="product-card" data-id="${product.id}">
+        <article class="gb-product-tile" data-id="${product.id}">
             <img src="${product.photo}" alt="${product.name}" width="300" height="300" loading="lazy">
             <h3>${product.name}</h3>
             <p class="product-category">${product.category}</p>
             <p class="product-price">${product.price === 'varies' ? 'Price Varies' : product.price > 0 ? `$${Number(product.price).toFixed(2)}` : 'Free / Inspiration'}</p>
-            ${product.custom ? '<span class="custom-badge">Custom</span>' : ''}
+            ${product.custom ? '<span class="gb-tag">Custom</span>' : ''}
         </article>
     `).join('');
 
-    productsGrid.querySelectorAll('.product-card').forEach(card => {
+    productsGrid.querySelectorAll('.gb-product-tile').forEach(card => {
         card.addEventListener('click', () => {
             const id = Number(card.dataset.id);
             openModal(id);
